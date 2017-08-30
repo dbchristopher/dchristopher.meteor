@@ -27,7 +27,6 @@ function fillFrame(canvas, origin, shape) {
   const rows = Math.ceil(canvas.height / (dimensions.h + margin));
   const cols = Math.ceil(canvas.width / (dimensions.w + margin));
   const ctx = canvas.getContext("2d")
-
   _.times(cols + 2, (c) => {
     const hOrigin = { x: origin.x + ((dimensions.w + margin) * c) - dimensions.w, y: origin.y };
     shape(ctx, hOrigin);
