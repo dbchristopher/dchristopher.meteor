@@ -3,12 +3,12 @@ import _ from 'lodash';
 
 const dimensions = { w: 40, h: 40 };
 const origin = { x: 0, y: 0 };
-const margin = 5;
+const margin = 1;
 
 function drawTriangle(ctx, origin) {
   ctx.beginPath();
   ctx.globalCompositeOperation = "screen";
-  ctx.fillStyle = 'RGBA(19, 124, 201, .3)';
+  ctx.fillStyle = 'RGBA(19, 124, 201, .1)';
   ctx.rect(origin.x,origin.y,dimensions.w,dimensions.h);
   ctx.fill();
   ctx.closePath();
@@ -17,8 +17,8 @@ function drawTriangle(ctx, origin) {
 function drawTriangleLeft(ctx, origin) {
   ctx.beginPath();
   ctx.globalCompositeOperation = "screen";
-  ctx.fillStyle = 'RGBA(19, 124, 201, .5)';
-  ctx.arc(origin.x, origin.y, dimensions.w, 0, 2 * Math.PI, false);
+  ctx.fillStyle = 'RGBA(19, 124, 201, .1)';
+  ctx.rect(origin.x,origin.y,dimensions.w,dimensions.h);
   ctx.fill();
   ctx.closePath();
 }
