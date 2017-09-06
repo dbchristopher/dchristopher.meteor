@@ -1,13 +1,10 @@
 html {
   box-sizing: border-box;
+  font-size: 16px;
 }
 
 *, *:before, *:after {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
-}
-
-canvas {
-  display: block;
 }

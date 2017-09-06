@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
 
-const dimensions = { w: 70, h: 70 };
+const dimensions = { w: 100, h: 100 };
 const origin = { x: 0, y: 0 };
-const margin = 10;
+const margin = 1;
 
 function drawTriangle(ctx, origin) {
   ctx.beginPath();
@@ -39,7 +39,7 @@ function fillFrame(canvas, origin, shape) {
 
 function addBackground(canvas) {
   const ctx = canvas.getContext("2d");
-  ctx.fillStyle = "#005BA0";
+  ctx.fillStyle = "#405B60";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
 
@@ -74,7 +74,8 @@ class componentName extends Component {
     return (
       <header className="header">
         <canvas className="header__canvas" ref={(el) => { this.canvas = el; }}></canvas>
-        <h1>Daniel Christopher</h1>
+        <h1 className="header__title">Daniel Christopher</h1>
+        <h2 className="header__subtitle">Senior Front-End Web Developer</h2>
       </header>
     );
   }

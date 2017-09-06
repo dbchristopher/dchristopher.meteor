@@ -1,5 +1,9 @@
 /* CSS declarations go here */
 
-@import "../imports/ui/styles/reset";
+@import "../imports/ui/styles/_settings--reset";
+@import "../imports/ui/styles/_settings--fonts";
 
-@import "../imports/ui/styles/header";
+@import "../imports/ui/styles/_elements--html";
+@import "../imports/ui/styles/_elements--body";
+
+@import "../imports/ui/styles/_component--header";
