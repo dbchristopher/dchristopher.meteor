@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
 
-const dimensions = { w: 40, h: 40 };
+const dimensions = { w: 70, h: 70 };
 const origin = { x: 0, y: 0 };
-const margin = 1;
+const margin = 10;
 
 function drawTriangle(ctx, origin) {
   ctx.beginPath();
   ctx.globalCompositeOperation = "screen";
   ctx.fillStyle = 'RGBA(19, 124, 201, .1)';
-  ctx.rect(origin.x,origin.y,dimensions.w,dimensions.h);
+  ctx.arc(origin.x,origin.y,dimensions.w/2,0,2*Math.PI);
   ctx.fill();
   ctx.closePath();
 }
@@ -18,7 +18,7 @@ function drawTriangleLeft(ctx, origin) {
   ctx.beginPath();
   ctx.globalCompositeOperation = "screen";
   ctx.fillStyle = 'RGBA(19, 124, 201, .1)';
-  ctx.rect(origin.x,origin.y,dimensions.w,dimensions.h);
+  ctx.arc(origin.x,origin.y,dimensions.w/2,0,2*Math.PI);
   ctx.fill();
   ctx.closePath();
 }
@@ -49,9 +49,9 @@ function animate(canvas, origin) {
 
   addBackground(canvas);
   fillFrame(canvas, origin, drawTriangle);
-  fillFrame(canvas, {x: origin.x * -1, y: origin.y - (dimensions.h / 2 + margin / 2) }, drawTriangleLeft);
+  fillFrame(canvas, {x: origin.x * -1, y: origin.y * -1 + (dimensions.h / 2 + margin / 2) }, drawTriangleLeft);
 
-  const originOffset = { x: (origin.x + .55) % (dimensions.w + margin), y: origin.y}
+  const originOffset = { x: (origin.x + .15) % (dimensions.w + margin), y: (origin.y + .15) % (dimensions.h + margin)}
   const callback = _.partial(animate, canvas, originOffset, dimensions);
   requestAnimationFrame(callback);
 }
