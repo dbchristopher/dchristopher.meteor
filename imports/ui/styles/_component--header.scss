@@ -1,21 +1,18 @@
 .header {
+  position: relative;
   &__canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1
   }
   &__title {
     color: #ffffff;
     font-size: 3rem;
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    top: 300px;
   }
   &__subtitle {
     color: #ffffff;
     font-size: 2rem;
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    top: 360px;
     font-weight: 300;
     font-style: italic;
   }
