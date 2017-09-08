@@ -1,5 +1,7 @@
+/* global window, addEventListener */
+
 import React, { Component } from 'react';
-import animateHeader from './animateHeader'
+import animateHeader from './animateHeader';
 
 class componentName extends Component {
   constructor(props) {
@@ -8,8 +10,8 @@ class componentName extends Component {
     this.measureBrowser = this.measureBrowser.bind(this);
     this.state = {
       width: window.innerWidth,
-      height: window.innerHeight
-    }
+      height: window.innerHeight,
+    };
   }
 
   componentDidMount() {
@@ -24,33 +26,33 @@ class componentName extends Component {
   setCanvasDimensions() {
     const canvas = this.canvas;
     canvas.width = this.state.width;
-    canvas.height = this.state.height;
+    canvas.height = this.state.height * 0.9;
   }
 
   measureBrowser() {
     this.setState({
       width: window.innerWidth,
-      height: window.innerHeight
-    })
+      height: window.innerHeight,
+    });
   }
 
   render() {
     return (
-      <header className="header flex-row flex-row__align-center flex-row__direction-vertical" style={{width: this.state.width, height: this.state.height}}>
-        <div className="flex-column--fixed">
+      <header className="header flex-row flex-row__align-center flex-row__direction-vertical" style={{ width: this.state.width, height: this.state.height * 0.9 }}>
+        <div className="flex-column--fixed header__navbar header__navbar--top">
           Download Resume.
           Contact Me
         </div>
         <div className="flex-column">
           <div className="flex-row flex-row__align-center flex-row__full-height">
             <div className="flex-column">
-              <canvas className="header__canvas" ref={(el) => { this.canvas = el; }}></canvas>
+              <canvas className="header__canvas" ref={(el) => { this.canvas = el; }} />
               <h1 className="header__title">Daniel Christopher</h1>
               <h2 className="header__subtitle">Senior Front-End Web Developer</h2>
             </div>
           </div>
         </div>
-        <div className="flex-column--fixed">
+        <div className="flex-column--fixed header__navbar header__navbar--bottom">
           Read More
         </div>
       </header>

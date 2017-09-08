@@ -1,5 +1,15 @@
 .header {
   position: relative;
+  color: #ffffff;
+  &__navbar {
+    padding: 10px;
+    &--top {
+      border-bottom: 1px solid rgba(255,255,255,.3);
+    }
+    &--bottom {
+      border-top: 1px solid rgba(255,255,255,.2);
+    }
+  }
   &__canvas {
     position: absolute;
     left: 0;
