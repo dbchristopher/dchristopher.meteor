@@ -1,15 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Route } from 'react-router-dom';
 import Header from './Header';
+import Contact from './Contact';
 
 // App component - represents the whole app
-export default class App extends Component {
- render() {
-   return (
-     <div className="container">
-       <Header />
-       <p>This is more content here!</p>
-       <p>This is more content here!</p>
-     </div>
-   );
- }
+function App() {
+  return (
+    <div className="container">
+      <Route exact path="/" component={Header} />
+      <Route exact path="/contact" component={Contact} />
+    </div>
+  );
 }
+
+export default App;

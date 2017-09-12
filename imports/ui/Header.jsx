@@ -1,7 +1,8 @@
 /* global window, addEventListener */
 
 import React, { Component } from 'react';
-import animateHeader from './animateHeader';
+import { Link } from 'react-router-dom';
+import animateHeader from './_helper-animateHeader';
 
 class componentName extends Component {
   constructor(props) {
@@ -40,8 +41,8 @@ class componentName extends Component {
     return (
       <header className="header flex-row flex-row__align-center flex-row__direction-vertical" style={{ width: this.state.width, height: this.state.height * 0.9 }}>
         <div className="flex-column--fixed header__navbar header__navbar--top">
-          Download Resume.
-          Contact Me
+          <a href="http://localhost:3000/downloads/resume.pdf">Resume (PDF)</a>
+          <Link to="/contact">Contact Me</Link>
         </div>
         <div className="flex-column">
           <div className="flex-row flex-row__align-center flex-row__full-height">
@@ -53,7 +54,7 @@ class componentName extends Component {
           </div>
         </div>
         <div className="flex-column--fixed header__navbar header__navbar--bottom">
-          Read More
+          Scroll For More
         </div>
       </header>
     );

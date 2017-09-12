@@ -3,14 +3,14 @@
 import { mapValues, times, partial } from 'lodash';
 
 const diameter = 100;
-const margin = 0;
+const margin = 100;
 
-function drawCircle(ctx, origin, hue, sizeFrame) {
+function drawShape(ctx, origin, hue, sizeFrame) {
   ctx.beginPath();
   ctx.globalCompositeOperation = 'screen';
   ctx.fillStyle = `hsl(${hue}, 100%, 4%)`;
-  const additive = (Math.sin(sizeFrame) + 1) * 30 + 10;
-  ctx.arc(origin.x, origin.y, (diameter / 2) + additive, 0, 2 * Math.PI);
+  const additive = ((Math.sin(sizeFrame) + 1) * 30) + 10;
+  ctx.rect(origin.x, origin.y, diameter, diameter + additive);
   ctx.fill();
   ctx.closePath();
 }
@@ -20,11 +20,15 @@ function fillFrame(canvas, origin, hue, sizeFrame) {
   const cols = Math.ceil(canvas.width / (diameter)) + 3;
   const ctx = canvas.getContext('2d');
   times(cols, (c) => {
-    const hOrigin = { x: origin.x + ((diameter + margin) * c) - diameter, y: origin.y - diameter };
-    drawCircle(ctx, hOrigin, hue, sizeFrame);
+    const hOrigin = {
+      x: (origin.x + ((diameter + margin) * c)) - diameter,
+      y: origin.y - diameter };
+    drawShape(ctx, hOrigin, hue, sizeFrame);
     times(rows, (r) => {
-      const vOrigin = { x: hOrigin.x, y: hOrigin.y + ((diameter + margin) * r) + diameter + margin };
-      drawCircle(ctx, vOrigin, hue, sizeFrame);
+      const vOrigin = {
+        x: hOrigin.x,
+        y: hOrigin.y + ((diameter + margin) * r) + diameter + margin };
+      drawShape(ctx, vOrigin, hue, sizeFrame);
     });
   });
 }
