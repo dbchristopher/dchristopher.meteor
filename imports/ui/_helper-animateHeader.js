@@ -21,7 +21,7 @@ function fillFrame(canvas, origin, hue, sizeFrame) {
   const ctx = canvas.getContext('2d');
   times(cols, (c) => {
     const hOrigin = {
-      x: (origin.x + ((diameter + margin) * c)) - diameter,
+      x: (origin.x + ((diameter + (margin / 2)) * c)) - diameter,
       y: origin.y - diameter };
     drawShape(ctx, hOrigin, hue, sizeFrame);
     times(rows, (r) => {

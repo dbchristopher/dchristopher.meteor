@@ -7,13 +7,13 @@ Meteor.methods({
     if (formData.lastName.length > 0) {
       throw new Meteor.Error('bot-detected');
     }
-    const client = new SparkPost(Meteor.settings.env.SPARKPOST_API_KEY);
+    const client = new SparkPost(Meteor.settings.private.SPARKPOST_API_KEY);
     client.transmissions.send({
       options: {
-        sandbox: true,
+        sandbox: false,
       },
       content: {
-        from: 'testing@sparkpostbox.com',
+        from: 'hi@mail.dchristopher.me',
         subject: 'Hello, World!',
         html: '<html><body><p>Testing SparkPost - the world\'s most awesomest email service!</p></body></html>',
       },
@@ -21,7 +21,7 @@ Meteor.methods({
         { address: 'dbchristopher@gmail.com' },
       ],
     }).then((data) => {
-      console.log('Woohoo! You just sent your first mailing!');
+      console.log('Mail sent.');
       console.log(data);
     }).catch((err) => {
       console.log('Whoops! Something went wrong');

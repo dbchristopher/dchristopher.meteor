@@ -1,8 +1,10 @@
 {
-  "www.uxmonk.com": {
+  "www.dchristopher.me": {
     "env": {
-      "ROOT_URL": "http://www.dchristopher.me",
-      "SPARKPOST_API_KEY": "aeb193645fe8e82804f632a8e950af1acb52ad98"
+      "ROOT_URL": "http://www.dchristopher.me"
     }
+  },
+  "private": {
+    "SPARKPOST_API_KEY": "aeb193645fe8e82804f632a8e950af1acb52ad98"
   }
 }
