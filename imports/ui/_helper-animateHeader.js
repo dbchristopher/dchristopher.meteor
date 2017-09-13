@@ -35,11 +35,11 @@ function fillFrame(canvas, origin, hue, sizeFrame) {
 
 function addBackground(canvas, hue) {
   const ctx = canvas.getContext('2d');
-  ctx.fillStyle = `hsl(${hue}, 60%, 31.4%)`;
+  ctx.fillStyle = `hsl(${hue}, 60%, 40%)`;
 
   const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
-  gradient.addColorStop(0, `hsl(${hue}, 60%, 30%)`);
-  gradient.addColorStop(1, `hsl(${hue}, 60%, 15%)`);
+  gradient.addColorStop(0, `hsl(${hue}, 60%, 35%)`);
+  gradient.addColorStop(1, `hsl(${hue}, 60%, 20%)`);
   ctx.fillStyle = gradient;
 
   ctx.fillRect(0, 0, canvas.width, canvas.height);
