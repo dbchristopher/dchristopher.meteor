@@ -41,7 +41,7 @@ class componentName extends Component {
     return (
       <header className="header flex-row flex-row__align-center flex-row__direction-vertical" style={{ width: this.state.width, height: this.state.height * 0.9 }}>
         <div className="flex-column--fixed header__navbar header__navbar--top">
-          <a href="http://localhost:3000/downloads/resume.pdf">Resume (PDF)</a>
+          <a href="/downloads/resume.pdf">Resume (PDF)</a>
           <Link to="/contact">Contact Me</Link>
         </div>
         <div className="flex-column">
