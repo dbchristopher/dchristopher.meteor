@@ -7,7 +7,7 @@ Meteor.methods({
     if (formData.lastName.length > 0) {
       throw new Meteor.Error('bot-detected');
     }
-    const client = new SparkPost(Meteor.settings.SPARKPOST_API_KEY);
+    const client = new SparkPost(Meteor.settings.env.SPARKPOST_API_KEY);
     client.transmissions.send({
       options: {
         sandbox: true,
