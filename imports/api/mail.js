@@ -1,6 +1,5 @@
 import { Meteor } from 'meteor/meteor';
 import SparkPost from 'sparkpost';
-import sparkpostApiKey from '../_settings-sparkpost';
 
 Meteor.methods({
   'mail.send': (formData) => {
@@ -8,7 +7,7 @@ Meteor.methods({
     if (formData.lastName.length > 0) {
       throw new Meteor.Error('bot-detected');
     }
-    const client = new SparkPost(sparkpostApiKey);
+    const client = new SparkPost(Meteor.settings.SPARKPOST_API_KEY);
     client.transmissions.send({
       options: {
         sandbox: true,
