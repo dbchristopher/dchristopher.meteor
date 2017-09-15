@@ -20,15 +20,15 @@ function fillFrame(canvas, origin, hue, sizeFrame) {
   const cols = Math.ceil(canvas.width / (diameter)) + 3;
   const ctx = canvas.getContext('2d');
   times(cols, (c) => {
-    const hOrigin = {
+    const colOrigin = {
       x: (origin.x + ((diameter + (margin / 2)) * c)) - diameter,
       y: origin.y - diameter };
-    drawShape(ctx, hOrigin, hue, sizeFrame);
+    drawShape(ctx, colOrigin, hue, sizeFrame);
     times(rows, (r) => {
-      const vOrigin = {
-        x: hOrigin.x,
-        y: hOrigin.y + ((diameter + margin) * r) + diameter + margin };
-      drawShape(ctx, vOrigin, hue, sizeFrame);
+      const rowOrigin = {
+        x: colOrigin.x,
+        y: colOrigin.y + ((diameter + margin) * r) + diameter + margin };
+      drawShape(ctx, rowOrigin, hue, sizeFrame);
     });
   });
 }
@@ -69,8 +69,8 @@ export default function animate(canvas, origin = { x: 0, y: 0 }, hue = 189, size
   fillFrame(canvas, mapValues({ x: origin.x, y: offset(origin.y) }, invert), hue, sizeFrame);
 
   const incrementPos = partial(increment, 0.15, diameter + margin);
-  const incrementHue = partial(increment, 0.3, 360);
-  const incrementSize = partial(increment, Math.PI / 300, 180);
+  const incrementHue = partial(increment, 0.2, 360);
+  const incrementSize = partial(increment, Math.PI / 360, 360);
   const callback = partial(animate, canvas, mapValues(origin, incrementPos), incrementHue(hue), incrementSize(sizeFrame));
   requestAnimationFrame(callback);
 }
