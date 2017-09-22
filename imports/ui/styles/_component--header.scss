@@ -3,6 +3,7 @@
   color: #ffffff;
   &__navbar {
     padding: 10px;
+    width: 100%;
     &--top {
       border-bottom: 1px solid rgba(255,255,255,.3);
     }
@@ -25,5 +26,9 @@
     font-size: 2rem;
     font-weight: 300;
     font-style: italic;
+  }
+  &__link {
+    display: inline-block;
+    padding: 5px 10px;
   }
 }
