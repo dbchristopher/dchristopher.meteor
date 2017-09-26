@@ -11,8 +11,8 @@ function Index() {
           <Link to="/" className="link--bare text--white">&#8592; Back To Main</Link>
         </div>
       </NavBar>
-      <div className="layout__wrapper layout__wrapper--narrow">
-        Contact Page Yo!!!
+      <div className="layout__wrapper layout__wrapper--narrow content">
+        <h1 className="page-title">Hi.</h1>
         <ContactForm />
       </div>
     </div>

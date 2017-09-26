@@ -2,4 +2,10 @@
   &--white {
     color: $white;
   }
+  &--center {
+    text-align: center;
+  }
+  &--large {
+    font-size: 2rem;
+  }
 }

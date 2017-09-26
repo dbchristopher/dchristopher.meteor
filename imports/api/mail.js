@@ -14,8 +14,8 @@ Meteor.methods({
       },
       content: {
         from: 'hi@mail.dchristopher.me',
-        subject: 'Hello, World!',
-        html: '<html><body><p>Testing SparkPost - the world\'s most awesomest email service!</p></body></html>',
+        subject: 'New contact from dbchristopher.me',
+        html: `<html><body><p><strong>From:</strong> ${formData.name} (${formData.email})</p><p><strong>Message:</strong> ${formData.message}</p></body></html>`,
       },
       recipients: [
         { address: 'dbchristopher@gmail.com' },

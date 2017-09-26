@@ -1,6 +1,7 @@
 .header {
   position: relative;
   color: #ffffff;
+  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
   &__navbar {
     padding: 10px;
     width: 100%;
@@ -10,6 +11,10 @@
     &--bottom {
       border-top: 1px solid rgba(255,255,255,.2);
     }
+  }
+  &__social-links {
+    display: inline-block;
+    border-left: 1px solid rgba(255,255,255,.2);
   }
   &__canvas {
     position: absolute;

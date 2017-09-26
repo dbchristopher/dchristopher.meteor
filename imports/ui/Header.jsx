@@ -40,23 +40,24 @@ class componentName extends Component {
   render() {
     return (
       <header className="header flex-row flex-row__align-center flex-row__direction-vertical" style={{ width: this.state.width, height: this.state.height * 0.9 }}>
-        <div className="flex-column--fixed header__navbar header__navbar--top">
-          <a href="/downloads/resume.pdf" className="header__link text--white link--bare">Resume (PDF)</a>
-          <Link to="/contact" className="header__link text--white link--bare">Contact Me</Link>
-          <a href="https://www.instagram.com/dxchristopher/" target="_blank" className="header__link text--white link--bare">Instagram</a>
-          <a href="https://twitter.com/uxmonk" target="_blank" className="header__link text--white link--bare">Twitter</a>
-        </div>
         <div className="flex-column">
           <div className="flex-row flex-row__align-center flex-row__full-height">
             <div className="flex-column">
               <canvas className="header__canvas" ref={(el) => { this.canvas = el; }} />
-              <h1 className="header__title">Daniel Christopher</h1>
+              <h1 className="page-title">Daniel Christopher</h1>
               <h2 className="header__subtitle">Senior Front-End Web Developer</h2>
+              <div className="header__links">
+                <div className="flex-column--fixed header__navbar">
+                  <Link to="/contact" className="header__link text--white link--bare">Contact Me</Link>
+                  <a href="/downloads/resume.pdf" className="header__link text--white link--bare">Download Resume (PDF)</a>
+                  <div className="header__social-links">
+                    <a href="https://www.instagram.com/dxchristopher/" target="_blank" className="header__link text--white link--bare">Instagram</a>
+                    <a href="https://twitter.com/uxmonk" target="_blank" className="header__link text--white link--bare">Twitter</a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="flex-column--fixed header__navbar header__navbar--bottom text--white">
-          Scroll For More
         </div>
       </header>
     );

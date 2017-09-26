@@ -1,17 +1,57 @@
 .form {
+  position: relative;
   &__input {
-    width: 100%;
-    height: 2em;
+    height: 2rem;
+    line-height: 2rem;
     font-size: 1.5rem;
-    padding: 10px;
-    border-radius: 3px;
-    border: 1px solid $light-gray;
-    &__honeypot {
+    padding: 0;
+    border: none;
+    border-bottom: 1px solid $black;
+    width: 100%;
+    &--inline {
+      display: inline-block;
+      width: 300px;
+      margin-left: 10px
+    }
+    &--honeypot {
       position: absolute;
       left: -5000px;
     }
   }
-  &__textarea {
-    height: 4em;
+  &__pending {
+    position: absolute;
+    left: -5%;
+    top: -5%;
+    width: 110%;
+    height: 110%;
+    background: rgba(245,245,245,.8);
+    z-index: 2;
   }
+  &__button {
+    font-size: 2rem;
+    background: $light-gray;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+  }
+  &__group {
+    margin-bottom: 1em;
+  }
+  &__textarea {
+    overflow: hidden;
+  }
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $light-gray;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $light-gray;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $light-gray;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: $light-gray;
 }
