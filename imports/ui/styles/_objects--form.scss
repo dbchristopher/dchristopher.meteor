@@ -9,9 +9,11 @@
     border-bottom: 1px solid $black;
     width: 100%;
     &--inline {
-      display: inline-block;
-      width: 300px;
-      margin-left: 10px
+      @media screen and (min-width: 500px) {
+        display: inline-block;
+        width: 300px;
+        margin-left: 10px
+      }
     }
     &--honeypot {
       position: absolute;
