@@ -46,7 +46,7 @@ class ContactForm extends Component {
             Message received!! I&#8217;ll get back to you in a day or two.
           </p>
           <p className="form__group">
-            <iframe src="https://giphy.com/embed/mgqefqwSbToPe" width="480" height="360" frameBorder="0" className="giphy-embed" allowFullScreen title="giphy embed" />
+            <div style={{ width: '100%', height: '0', paddingBottom: '75%', position: 'relative' }}><iframe src="https://giphy.com/embed/mgqefqwSbToPe" width="100%" height="100%" style={{ position: 'absolute' }} frameBorder="0" className="giphy-embed" allowFullScreen title="mail confirmation"/></div>
           </p>
         </div>
       );
