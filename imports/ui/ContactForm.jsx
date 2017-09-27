@@ -53,18 +53,18 @@ class ContactForm extends Component {
     }
     return (
       <form onSubmit={this.onSubmit} className="form">
-        <div className="text--large">
+        <div className="text--med">
           <p className="form__group">
             My name is
-            <input className="form__input form__input--inline" placeholder="Aloysius Snuffleupagus, III" id="name" type="text" name="name" value={name} onChange={this.onChange} required="required" />.
+            <input className="form__input form__input--inline" placeholder="Charles Pamplemousse, III" id="name" type="text" name="name" value={name} onChange={this.onChange} required="required" />.
           </p>
           <p className="form__group">
-            I&#8217;m writing to tell you that
-            <textarea className="form__input form__textarea" placeholder="everything is going to be ok." id="message" name="message" onChange={this.onChange} value={message} />
+            My most embarassing secret is
+            <textarea className="form__input form__textarea" placeholder="I like to drink peanut butter in my coffee." id="message" name="message" onChange={this.onChange} value={message} />
           </p>
           <p className="form__group">
-            If that sounds interesting, please write me back at
-            <input className="form__input form__input--inline" placeholder="ally.snuffs@email.com" id="email" type="email" name="email" value={email} onChange={this.onChange} required="required" />.
+            Please write me back at
+            <input className="form__input form__input--inline" placeholder="charly.pomp@email.com" id="email" type="email" name="email" value={email} onChange={this.onChange} required="required" />.
           </p>
           {/* Honeypot: last name should NOT be filled in */}
           <input className="form__input form__input--honeypot" placeholder="Last Name" id="lastName" type="text" name="lastName" onChange={this.onChange} value={lastName} />
