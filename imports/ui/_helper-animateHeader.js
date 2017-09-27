@@ -2,11 +2,11 @@
 
 import { mapValues, times, partial } from 'lodash';
 
-const diameter = 100;
-const margin = 10;
+const diameter = 90;
+const margin = 40;
 
 function drawShape(ctx, origin, hue, sizeModifier) {
-  const additive = Math.sin(sizeModifier) * 10;
+  const additive = Math.sin(sizeModifier) * 40;
   ctx.beginPath();
   ctx.globalCompositeOperation = 'screen';
   ctx.fillStyle = `hsl(${hue}, 100%, 4%)`;
@@ -70,7 +70,7 @@ export default function animate(canvas, origin = { x: 0, y: 0 }, hue = 189, size
 
   const incrementPos = partial(increment, 0.2, diameter + margin);
   const incrementHue = partial(increment, 0.2, 360);
-  const incrementSize = partial(increment, 0.02, 180);
+  const incrementSize = partial(increment, 0.01, 180);
   const callback = partial(animate, canvas, mapValues(origin, incrementPos), incrementHue(hue), incrementSize(sizeModifier));
   requestAnimationFrame(callback);
 }

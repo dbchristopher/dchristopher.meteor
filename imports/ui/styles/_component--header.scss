@@ -14,7 +14,13 @@
   }
   &__social-links {
     display: inline-block;
-    border-left: 1px solid rgba(255,255,255,.2);
+    border-left: 2px solid rgba(255,255,255,.7);
+  }
+  &__social-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
   }
   &__canvas {
     position: absolute;
