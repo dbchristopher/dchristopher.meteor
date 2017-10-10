@@ -17,7 +17,7 @@ class ContactForm extends Component {
       name: '',
       email: '',
       message: '',
-      lastName: '',
+      bestCoffeeRecipe: '',
       sending: false,
       success: false,
     };
@@ -38,7 +38,7 @@ class ContactForm extends Component {
     });
   }
   render() {
-    const { name, email, message, lastName, sending, success } = this.state;
+    const { name, email, message, bestCoffeeRecipe, sending, success } = this.state;
     if (success === true) {
       return (
         <div>
@@ -67,7 +67,7 @@ class ContactForm extends Component {
             <input className="form__input form__input--inline" placeholder="charly.pamps@email.com" id="email" type="email" name="email" value={email} onChange={this.onChange} required="required" />
           </p>
           {/* Honeypot: last name should NOT be filled in */}
-          <input className="form__input form__input--honeypot" placeholder="Last Name" id="lastName" type="text" name="lastName" onChange={this.onChange} value={lastName} />
+          <input className="form__input form__input--honeypot" placeholder="Last Name" id="bestCoffeeRecipe" type="text" name="bestCoffeeRecipe" onChange={this.onChange} value={bestCoffeeRecipe} />
           <p className="form__group">
             <input className="form__button" type="Submit" value="Send" />
           </p>
