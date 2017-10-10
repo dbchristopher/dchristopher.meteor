@@ -49,7 +49,7 @@ class componentName extends Component {
               <div className="header__links">
                 <div className="flex-column--fixed header__navbar">
                   <Link to="/contact" className="header__link text--white link--bare">Contact</Link>
-                  <a href="/downloads/resume.pdf" className="header__link text--white link--bare">Download Resume (PDF)</a>
+                  <a href="/downloads/resume-public.pdf" className="header__link text--white link--bare">Download Resume (PDF)</a>
                   <div className="header__social-links">
                     <a href="https://github.com/dbchristopher" target="_blank" className="header__link text--white link--bare"><img className="header__social-icon" src="/images/github.svg" alt="Github" /></a>
                     <a href="https://www.instagram.com/dxchristopher/" target="_blank" className="header__link text--white link--bare"><img className="header__social-icon" src="/images/instagram.svg" alt="Instagram" /></a>
