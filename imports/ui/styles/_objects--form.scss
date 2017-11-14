@@ -31,10 +31,11 @@
   }
   &__button {
     font-size: 2rem;
-    background: $light-gray;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0,0,0, .1);
   }
   &__group {
     margin-bottom: 1em;

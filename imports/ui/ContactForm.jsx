@@ -1,5 +1,8 @@
+/* global requestAnimationFrame */
+
 import React, { Component } from 'react';
 import { Meteor } from 'meteor/meteor';
+import { partial } from 'lodash';
 
 function Sending() {
   return (
@@ -8,11 +11,20 @@ function Sending() {
     </div>);
 }
 
+function increment(speed, modulous, val) {
+  const incremented = (val + speed) % modulous;
+  if (incremented <= 0) {
+    return modulous;
+  }
+  return incremented;
+}
+
 class ContactForm extends Component {
   constructor(props) {
     super(props);
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
+    this.animate = this.animate.bind(this);
     this.state = {
       name: '',
       email: '',
@@ -20,7 +32,11 @@ class ContactForm extends Component {
       bestCoffeeRecipe: '',
       sending: false,
       success: false,
+      hue: 189,
     };
+  }
+  componentDidMount() {
+    this.animate();
   }
   onChange(event) {
     const { name, value } = event.target;
@@ -36,6 +52,12 @@ class ContactForm extends Component {
         this.setState({ success: true });
       }
     });
+  }
+  animate() {
+    const incrementHue = partial(increment, 0.2, 360);
+    const newHue = incrementHue(this.state.hue);
+    this.setState({ hue: newHue });
+    requestAnimationFrame(this.animate);
   }
   render() {
     const { name, email, message, bestCoffeeRecipe, sending, success } = this.state;
@@ -69,7 +91,7 @@ class ContactForm extends Component {
           {/* Honeypot: last name should NOT be filled in */}
           <input className="form__input form__input--honeypot" placeholder="Last Name" id="bestCoffeeRecipe" type="text" name="bestCoffeeRecipe" onChange={this.onChange} value={bestCoffeeRecipe} />
           <p className="form__group">
-            <input className="form__button" type="Submit" value="Send" />
+            <input style={{ backgroundColor: `hsl(${this.state.hue}, 100%, 40%)` }} className="form__button" type="Submit" value="Send" />
           </p>
         </div>
         { sending &&
