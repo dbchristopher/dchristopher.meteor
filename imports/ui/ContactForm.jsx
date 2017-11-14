@@ -56,15 +56,15 @@ class ContactForm extends Component {
         <div className="text--med">
           <p className="form__group">
             My name is
-            <input className="form__input form__input--inline" placeholder="Charles Pamplemousse, III" id="name" type="text" name="name" value={name} onChange={this.onChange} required="required" />
+            <input className="form__input form__input--inline" placeholder="" id="name" type="text" name="name" value={name} onChange={this.onChange} required="required" />
           </p>
           <p className="form__group">
-            My most embarassing secret is
-            <textarea className="form__input form__textarea" placeholder="I like to drink peanut butter in my coffee." id="message" name="message" onChange={this.onChange} value={message} />
+            Something interesting I&rsquo;d like you to know is
+            <textarea className="form__input form__textarea" placeholder="" id="message" name="message" onChange={this.onChange} value={message} />
           </p>
           <p className="form__group">
             Please write me back at
-            <input className="form__input form__input--inline" placeholder="charly.pamps@email.com" id="email" type="email" name="email" value={email} onChange={this.onChange} required="required" />
+            <input className="form__input form__input--inline" placeholder="" id="email" type="email" name="email" value={email} onChange={this.onChange} required="required" />
           </p>
           {/* Honeypot: last name should NOT be filled in */}
           <input className="form__input form__input--honeypot" placeholder="Last Name" id="bestCoffeeRecipe" type="text" name="bestCoffeeRecipe" onChange={this.onChange} value={bestCoffeeRecipe} />

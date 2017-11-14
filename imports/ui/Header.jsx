@@ -45,7 +45,7 @@ class componentName extends Component {
             <div className="flex-column">
               <canvas className="header__canvas" ref={(el) => { this.canvas = el; }} />
               <h1 className="page-title">Daniel Christopher</h1>
-              <h2 className="header__subtitle">Maker of things for the web.</h2>
+              <h2 className="header__subtitle">Front End Engineer &amp; UX Designer.</h2>
               <div className="header__links">
                 <div className="flex-column--fixed header__navbar">
                   <Link to="/contact" className="header__link text--white link--bare">Contact</Link>
