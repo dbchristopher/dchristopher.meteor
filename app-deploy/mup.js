@@ -3,10 +3,7 @@ module.exports = {
     one: {
       host: '34.230.85.152',
       username: 'ubuntu',
-      pem: '../dchristopherme.pem',
-      // pem:
-      // password:
-      // or leave blank for authenticate from ssh-agent
+      pem: '../dchristopherme112017.pem',
     },
   },
   meteor: {
