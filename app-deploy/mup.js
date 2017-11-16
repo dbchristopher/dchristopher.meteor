@@ -1,9 +1,9 @@
 module.exports = {
   servers: {
     one: {
-      host: '34.230.85.152',
+      host: '54.236.19.23',
       username: 'ubuntu',
-      pem: '../dchristopherme112017.pem',
+      pem: '../newdchristopher.pem',
     },
   },
   meteor: {
@@ -19,7 +19,7 @@ module.exports = {
       ROOT_URL: 'http://www.dchristopher.me',
       // MONGO_URL: <DB_URL>
     },
-    dockerImage: 'abernix/meteord:base',
+    dockerImage: 'abernix/meteord:node-8.4.0-base',
     deployCheckWaitTime: 60,
   },
   mongo: {
