@@ -2,10 +2,23 @@ import React from 'react';
 
 function WorkHistory() {
   return (
-    <ul className="blank-list">
+    <ul className="blank-list work-history">
       <li className="blank-list__element">
         <div className="work-history__company">
-          Upworthy, Remote || 2012 &ndash; Present
+          Udacity, Remote &middot; 2017 &ndash; Present
+        </div>
+        <div className="work-history__title">
+          FRONT-END ENGINEER
+        </div>
+        <div className="work-history__description">
+          <p>
+            Responsible for building out an entirely new reviews product, to
+            improve classroom experience and expand the possibilities of what subjects
+            can be tought in our platform.
+          </p>
+        </div>
+        <div className="work-history__company">
+          Upworthy, Remote &middot; 2012 &ndash; 2017
         </div>
         <div className="work-history__title">
           FRONT-END ENGINEER
@@ -19,7 +32,7 @@ function WorkHistory() {
           </p>
         </div>
         <div className="work-history__title">
-          DEVELOPER & UX DESIGNER
+          DEVELOPER &amp; UX DESIGNER
         </div>
         <div className="work-history__description">
           <p>
@@ -33,7 +46,7 @@ function WorkHistory() {
       </li>
       <li className="blank-list__element">
         <div className="work-history__company">
-          LUCENT PDX. PORTLAND, OR || 2009 &ndash; 2012
+          LUCENT PDX. PORTLAND, OR &middot; 2009 &ndash; 2012
         </div>
         <div className="work-history__title">
           CO-FOUNDER, DESIGNER & DEVELOPER
@@ -50,7 +63,7 @@ function WorkHistory() {
       </li>
       <li className="blank-list__element">
         <div className="work-history__company">
-          MUSICMAN PDX. PORTLAND, OR || 2003 &dash; 2011
+          MUSICMAN PDX. PORTLAND, OR &middot; 2003 &ndash; 2011
         </div>
         <div className="work-history__title">
           FOUNDER, DESIGNER, DEVELOPER
@@ -60,10 +73,6 @@ function WorkHistory() {
             A crowdsourced music education community monetized through
             Google Ad network. Starting as a simple educational side project, it
             eventually became my full-time job for the better part of a decade.
-          </p>
-          <p>
-            This success was the result of SEO driven traffic, and a focus on
-            differentiating my product through better UX.
           </p>
         </div>
       </li>

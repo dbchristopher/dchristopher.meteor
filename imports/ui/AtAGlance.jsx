@@ -11,8 +11,8 @@ function AtAGlance() {
       </li>
       <li className="blank-list__element">
         Use of optimal CSS conventions to help scale large CSS codebases:
-        <strong><a href="http://getbem.com/" rel="external">BEM</a></strong> and
-        <strong><a href="https://github.com/styled-components/styled-components" rel="external">Styled Components</a></strong>.
+        <strong> <a href="http://getbem.com/" rel="external">BEM</a></strong> and
+        <strong> <a href="https://github.com/styled-components/styled-components" rel="external">Styled Components</a></strong>.
       </li>
       <li className="blank-list__element">
         Comfortable in full stack environments, including <strong>Ruby on Rails</strong>, <strong>PHP</strong>, and <strong>WordPress</strong>.</li>
