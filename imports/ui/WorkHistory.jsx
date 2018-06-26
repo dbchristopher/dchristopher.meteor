@@ -14,7 +14,8 @@ function WorkHistory() {
           <p>
             Built from the ground up a question-and-answer platform to help unblock students at scale.
             Responsible for architecting, planning the front-end tech stack, and helping build
-            the brand-new platform from scratch.
+            this brand-new platform from scratch. The end product is similar to Stack Overflow and
+            provided a resource for students to help each other, increasing overall student success rates.
           </p>
         </div>
         <div className="work-history__company">
