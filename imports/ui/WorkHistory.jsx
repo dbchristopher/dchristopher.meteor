@@ -8,13 +8,13 @@ function WorkHistory() {
           Udacity, Remote &middot; 2017 &ndash; Present
         </div>
         <div className="work-history__title">
-          FRONT-END ENGINEER
+          FRONT-END ENGINEER (LEVEL 3)
         </div>
         <div className="work-history__description">
           <p>
-            Responsible for building out an entirely new reviews product, to
-            improve classroom experience and expand the possibilities of what subjects
-            can be tought in our platform.
+            Built from the ground up a question-and-answer platform to help unblock students at scale.
+            Responsible for architecting, planning the front-end tech stack, and helping build
+            the brand-new platform from scratch.
           </p>
         </div>
         <div className="work-history__company">
